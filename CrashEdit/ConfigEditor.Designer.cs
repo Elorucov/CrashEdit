@@ -370,7 +370,7 @@
             this.cmdReset.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.cmdReset.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.cmdReset.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.cmdReset.Location = new System.Drawing.Point(12, 308);
+            this.cmdReset.Location = new System.Drawing.Point(12, 287);
             this.cmdReset.Name = "cmdReset";
             this.cmdReset.Size = new System.Drawing.Size(91, 22);
             this.cmdReset.TabIndex = 10;
@@ -429,7 +429,7 @@
             this.cmdHelp.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.cmdHelp.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.cmdHelp.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.cmdHelp.Location = new System.Drawing.Point(12, 336);
+            this.cmdHelp.Location = new System.Drawing.Point(12, 315);
             this.cmdHelp.Name = "cmdHelp";
             this.cmdHelp.Size = new System.Drawing.Size(50, 23);
             this.cmdHelp.Style = MetroFramework.MetroColorStyle.Blue;
@@ -445,7 +445,7 @@
             // 
             this.chkCustomCrates.AutoSize = true;
             this.chkCustomCrates.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.chkCustomCrates.Location = new System.Drawing.Point(4, 287);
+            this.chkCustomCrates.Location = new System.Drawing.Point(345, 266);
             this.chkCustomCrates.Name = "chkCustomCrates";
             this.chkCustomCrates.Size = new System.Drawing.Size(230, 15);
             this.chkCustomCrates.TabIndex = 15;
@@ -454,6 +454,7 @@
             this.chkCustomCrates.UseCustomBackColor = true;
             this.chkCustomCrates.UseCustomForeColor = true;
             this.chkCustomCrates.UseSelectable = true;
+            this.chkCustomCrates.Visible = false;
             this.chkCustomCrates.CheckedChanged += new System.EventHandler(this.ChkCustomCrates_CheckedChanged);
             // 
             // chkAnimViewPanel
