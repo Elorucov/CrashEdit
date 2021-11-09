@@ -45,6 +45,8 @@ namespace CrashEdit
             chkPatchNSDSavesNSF.Checked = Settings.Default.PatchNSDSavesNSF;
             chkOldPatchNSD.Text = Resources.Config_chkOldPatchNSD;
             chkOldPatchNSD.Checked = Settings.Default.OldPatchNSD;
+            chkModpackOmitSubdirs.Text = Resources.Config_chkModpackOmitDirs;
+            chkModpackOmitSubdirs.Checked = Settings.Default.modpackOmitDirs;
             chkDetailedCollision.Text = Resources.Config_chkDetailedCollision;
             chkDetailedCollision.Checked = Settings.Default.DetailedCollision;
             fraKeyBinds.Text = Resources.Config_fraKeyBinds;
@@ -165,6 +167,11 @@ namespace CrashEdit
         private void chkOldPatchNSD_CheckedChanged(object sender, EventArgs e)
         {
             Settings.Default.OldPatchNSD = chkOldPatchNSD.Checked;
+            Settings.Default.Save();
+        }
+
+        private void chkModpackOmitDirs_CheckedChanged (object sender, EventArgs e) {
+            Settings.Default.modpackOmitDirs = chkModpackOmitSubdirs.Checked;
             Settings.Default.Save();
         }
 

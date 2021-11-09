@@ -44,6 +44,7 @@
             this.lblAnimGrid = new System.Windows.Forms.Label();
             this.chkAnimGrid = new MetroFramework.Controls.MetroCheckBox();
             this.chkOldPatchNSD = new MetroFramework.Controls.MetroCheckBox();
+            this.chkModpackOmitSubdirs = new MetroFramework.Controls.MetroCheckBox(); 
             this.chkPatchNSDSavesNSF = new MetroFramework.Controls.MetroCheckBox();
             this.chkDeleteInvalidEntries = new MetroFramework.Controls.MetroCheckBox();
             this.chkUseAnimLinks = new MetroFramework.Controls.MetroCheckBox();
@@ -291,6 +292,23 @@
             this.chkOldPatchNSD.UseCustomForeColor = true;
             this.chkOldPatchNSD.UseSelectable = true;
             this.chkOldPatchNSD.CheckedChanged += new System.EventHandler(this.chkOldPatchNSD_CheckedChanged);
+
+            //
+            // chkModpackOmitSubdirs
+            //
+            this.chkModpackOmitSubdirs.AutoSize = true;
+            this.chkModpackOmitSubdirs.ForeColor = System.Drawing.Color.MediumSpringGreen;
+            this.chkModpackOmitSubdirs.Location = new System.Drawing.Point(4, 287);
+            this.chkModpackOmitSubdirs.Name = "chkModpackOmitSubdirs";
+            this.chkModpackOmitSubdirs.Size = new System.Drawing.Size(335, 15);
+            this.chkModpackOmitSubdirs.TabIndex = 9;
+            this.chkModpackOmitSubdirs.Text = "Omit S2 and .git directories when building BIN";
+            this.chkModpackOmitSubdirs.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.chkModpackOmitSubdirs.UseCustomBackColor = true;
+            this.chkModpackOmitSubdirs.UseCustomForeColor = true;
+            this.chkModpackOmitSubdirs.UseSelectable = true;
+            this.chkModpackOmitSubdirs.CheckedChanged += new System.EventHandler(this.chkModpackOmitDirs_CheckedChanged);
+
             // 
             // chkPatchNSDSavesNSF
             // 
@@ -370,7 +388,7 @@
             this.cmdReset.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.cmdReset.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.cmdReset.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.cmdReset.Location = new System.Drawing.Point(12, 287);
+            this.cmdReset.Location = new System.Drawing.Point(12, 310);
             this.cmdReset.Name = "cmdReset";
             this.cmdReset.Size = new System.Drawing.Size(91, 22);
             this.cmdReset.TabIndex = 10;
@@ -429,7 +447,7 @@
             this.cmdHelp.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.cmdHelp.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.cmdHelp.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.cmdHelp.Location = new System.Drawing.Point(12, 315);
+            this.cmdHelp.Location = new System.Drawing.Point(12, 340);
             this.cmdHelp.Name = "cmdHelp";
             this.cmdHelp.Size = new System.Drawing.Size(50, 23);
             this.cmdHelp.Style = MetroFramework.MetroColorStyle.Blue;
@@ -492,6 +510,7 @@
             this.Controls.Add(this.chkDetailedCollision);
             this.Controls.Add(this.cmdReset);
             this.Controls.Add(this.chkOldPatchNSD);
+            this.Controls.Add(this.chkModpackOmitSubdirs);
             this.Controls.Add(this.chkPatchNSDSavesNSF);
             this.Controls.Add(this.fraAnimGrid);
             this.Controls.Add(this.chkDeleteInvalidEntries);
@@ -543,6 +562,7 @@
         private DarkUI.Controls.DarkButton cmdClearCol;
         private MetroFramework.Controls.MetroCheckBox chkPatchNSDSavesNSF;
         private MetroFramework.Controls.MetroCheckBox chkOldPatchNSD;
+        private MetroFramework.Controls.MetroCheckBox chkModpackOmitSubdirs;
         private MetroFramework.Controls.MetroButton cmdReset;
         private MetroFramework.Controls.MetroCheckBox chkDetailedCollision;
         private System.Windows.Forms.GroupBox fraKeyBinds;

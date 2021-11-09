@@ -11,7 +11,7 @@
     <RootNamespace>CrashEdit</RootNamespace>
     <AssemblyName>CrashEdit</AssemblyName>
     <StartupObject>CrashEdit.Program</StartupObject>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -340,8 +340,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="DarkUI">
-      <HintPath>D:\DarkUI-master\Example\bin\Debug\DarkUI.dll</HintPath>
+    <Reference Include="DarkUI, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>.\bin\Release\DarkUI.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
@@ -448,6 +448,7 @@
     <EmbeddedResource Include="Properties\Resources.ja.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.ja.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.pt.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">

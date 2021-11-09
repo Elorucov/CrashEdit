@@ -369,7 +369,7 @@ namespace CrashEdit
             Height = Settings.Default.DefaultFormH;
             Load += new EventHandler(OldMainForm_Load);
             FormClosing += new FormClosingEventHandler(OldMainForm_FormClosing);
-            Text = $"CrashEdit-tweaked v{Assembly.GetExecutingAssembly().GetName().Version.ToString()}";
+            Text = $"CrashEdit-tweaked v{Assembly.GetExecutingAssembly().GetName().Version.ToString()} + omit option";
             Controls.Add(txtInput);
             Controls.Add(tbcTabs);
             Controls.Add(tsToolbar);
@@ -1395,7 +1395,9 @@ namespace CrashEdit
         void AddDirectoryToISO(CDBuilder fs, string prefix, DirectoryInfo dir)
         {
             foreach (DirectoryInfo subdir in dir.GetDirectories()) {
-                AddDirectoryToISO(fs, $"{prefix}{subdir.Name}\\", subdir);
+                if (Settings.Default.modpackOmitDirs && (subdir.Name == "S2" || subdir.Name == ".git"))
+                    continue;
+               AddDirectoryToISO(fs, $"{prefix}{subdir.Name}\\", subdir);
             }
             foreach (FileInfo file in dir.GetFiles()) {
                 fs.AddFile($"{prefix}{file.Name};1", file.FullName);
@@ -1598,7 +1600,7 @@ namespace CrashEdit
             // 
             // OldMainForm
             // 
-            this.ClientSize = new System.Drawing.Size(747, 560);
+            this.ClientSize = new System.Drawing.Size(747, 600);
             this.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.Name = "OldMainForm";
             this.ResumeLayout(false);
